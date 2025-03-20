@@ -1,7 +1,9 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -120,15 +122,74 @@ nav{
 }
 
 .overlay{
-    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7),  black);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3),  black);
     border-radius: 20px;
 }
 
 .banner-container{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
 
+.banner-container h2{
+    font-size: 4rem;
+    width: 50%;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(175, 0, 228);
+}
+
+.banner-container h4{
+    font-size: 1.5rem;
+    margin: 20px;
+    text-shadow: 3px 3px 5px rgb(115, 2, 2);
+
+}
+
+.banner-container p{
+    font-size: 1rem;
+    margin: 20px;
+    text-shadow: 3px 3px 5px rgb(2, 115, 36);
+}
+
+.input-container{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.email-input-box{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 60%;
+    color: white;
+    font-size: 1rem;
+}
+
+.email-input-box::placeholder{
+    color: white;
+}
+
+.get-started-button{
+    width: 30%;
+    background-color: rgb(83, 1, 117);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
 }
