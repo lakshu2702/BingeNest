@@ -1,195 +1,423 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
-.background-container{
-    background-image: url("./images/banner.jpg");
-    filter: blur(5px);
-    height: 100vh;
-    position: relative;
+* a{
+    color: white;
+    text-decoration: none;
 }
 
-.pink-overlay{
-    background-color: rgba(104, 3, 20, 0.204);
-    height: 100%;
-    width: 100%;
+.background-container {
+  background-image: url("./images/banner.jpg");
+  filter: blur(5px);
+  height: 100vh;
+  position: relative;
 }
 
-.content-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem;
+.pink-overlay {
+  background-color: rgba(104, 3, 20, 0.204);
+  height: 100%;
+  width: 100%;
 }
 
-nav{
-    height: 20vh;
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
 }
 
-.upper-nav-section{
+nav {
+  height: 20vh;
+}
+
+.upper-nav-section {
+  display: flex;
+  height: 50%;
+}
+
+.upper-nav-left {
+  width: 50%;
+}
+
+.upper-nav-right {
+  width: 50%;
+}
+
+.BingeNestLogo {
+  width: 35%;
+}
+
+.nav-button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.lang-button {
+  display: flex;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.signin-button {
+  background-color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.lang-button p {
+  margin-left: 5px;
+}
+
+.lower-nav-section {
+  height: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  width: 40%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  height: 7vh;
+}
+
+.menu-list li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-section {
+  position: relative;
+  border: 2px solid purple;
+  height: 90vh;
+  background-image: url(./images/banner.jpg);
+  border-radius: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3), black);
+  border-radius: 20px;
+}
+
+.banner-container {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-container h2 {
+  font-size: 4rem;
+  width: 50%;
+  text-align: center;
+  text-shadow: 3px 3px 5px rgb(175, 0, 228);
+}
+
+.banner-container h4 {
+  font-size: 1.5rem;
+  margin: 20px;
+  text-shadow: 3px 3px 5px rgb(115, 2, 2);
+}
+
+.banner-container p {
+  font-size: 1rem;
+  margin: 20px;
+  text-shadow: 3px 3px 5px rgb(2, 115, 36);
+}
+
+.input-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.email-input-box {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 60%;
+  color: white;
+  font-size: 1rem;
+}
+
+.email-input-box::placeholder {
+  color: white;
+}
+
+.get-started-button {
+  width: 30%;
+  background-color: rgb(83, 1, 117);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.carousel-section,
+.plan,
+.reason-to-join,
+.faq {
+  color: white;
+  margin-top: 3rem;
+}
+
+.carousel-section h2,
+.plan h2,
+.reason-to-join h2,
+.faq h2 {
+  margin-left: 5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.carousel-container,
+.plan-container,
+.reasons-container,
+.faq-card-container {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  margin: 2rem auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 20%;
+  height: 60vh;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.carousel-number {
+  position: absolute;
+  left: -20px;
+}
+
+.carousel-number span {
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 0.12rem rgb(255, 255, 255);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-size: 5rem;
+}
+
+.plan-card, .reason-card {
+  height: 38vh;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.372);
+  margin: 10px;
+}
+
+.plan-card1 {
+  background: linear-gradient(
+    149deg,
+    #1c4072 6.96%,
+    #172b47 40.17%,
+    #120c1f 73.39%
+  );
+}
+
+.plan-card2 {
+  background: linear-gradient(
+    149deg,
+    #1d529d 6.96%,
+    #233371 40.17%,
+    #120c1f 73.39%
+  );
+}
+
+.plan-card3 {
+  background: linear-gradient(
+    149deg,
+    #792a95 6.96%,
+    #38216c 40.17%,
+    #120c1f 73.39%
+  );
+}
+
+.plan-card4 {
+  background: linear-gradient(
+    149deg,
+    #922556 6.96%,
+    #391945 40.17%,
+    #120c1f 73.39%
+  );
+}
+
+.plan-card h2 {
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+
+.plan-card h4 {
+  font-size: 1.3rem;
+}
+
+.plan-card p {
+  font-size: 1rem;
+}
+
+.reason-card h2{
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.reason-card p{
+    font-size: 0.9rem;
+}
+
+.reason-card-lower-content svg{
+    height: 80px;
+    width: 80px;
+}
+
+.faq-card{
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+    width: 80%;
+}
+
+.faq-question{
     display: flex;
-    height: 50%;
-}
-
-.upper-nav-left{
-    width: 50%;
-}
-
-.upper-nav-right{
-    width: 50%;
-}
-
-.BingeNestLogo{
-    width: 35%;
-}
-
-.nav-button-container{
-    display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 100%;
+    color: rgb(179, 184, 245);
 }
 
-.lang-button{
-    display: flex;
-    padding: .4rem .8rem;
-    border-radius: 50px;
-    background: transparent;
-    border: 1px solid white;
-    outline: none;
-    color: white;
-    font-size: 1rem;
+.faq-question span{
+    font-size: 2rem;
+    font-weight: 900;
 }
 
-.signin-button{
-    background-color: #fff;
-    padding: .4rem .8rem;
-    border-radius: 50px;
-    outline: none;
-    border: none;
-    margin-left: 10px;
-    font-size: 1rem;
+.faq-answer{
+    display: none;
 }
 
-.lang-button p{
-    margin-left: 5px;
+.faq-card:hover{
+    cursor:pointer
 }
 
-.lower-nav-section{
-    height: 50%;
-    color: white;
-    display: flex;
-    justify-content: center;
+.faq-card:hover .faq-answer{
+    display: block;
+    cursor: pointer;
 }
 
-.menu-list{
-    width: 40%;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 50px;
-    background: rgba(0,0,0,.7);
-    box-shadow: 2px 3px 14px rgba(0, 0, 0, .5);
-    backdrop-filter: blur(7px);
-    height: 7vh;
-}
-
-.menu-list li{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.banner-section{
-    position: relative;
-    border: 2px solid purple;
-    height: 90vh;
-    background-image: url(./images/banner.jpg);
-    border-radius: 20px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.overlay{
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3),  black);
-    border-radius: 20px;
-}
-
-.banner-container{
-    height: 80%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: white;
+.faq-card-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center ;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.banner-container h2{
-    font-size: 4rem;
-    width: 50%;
+.get-started-section{
     text-align: center;
-    text-shadow: 3px 3px 5px rgb(175, 0, 228);
-}
-
-.banner-container h4{
-    font-size: 1.5rem;
-    margin: 20px;
-    text-shadow: 3px 3px 5px rgb(115, 2, 2);
-
-}
-
-.banner-container p{
-    font-size: 1rem;
-    margin: 20px;
-    text-shadow: 3px 3px 5px rgb(2, 115, 36);
-}
-
-.input-container{
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.email-input-box{
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    border: 1px solid white;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 60%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 1rem;
+    border-radius: 10px;
+    justify-content: center;
+    width: 80%;
 }
 
-.email-input-box::placeholder{
-    color: white;
-}
-
-.get-started-button{
-    width: 30%;
-    background-color: rgb(83, 1, 117);
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    color: #fff;
+.get-started-section p{
     font-size: 1.2rem;
-    font-weight: 800;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.input-cont{
+    display: flex ;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.email-input{
+    width: 60%;
+    padding: 0.8rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.email-input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.get-started-button:hover{
+    background-color: #373b49;
 }
