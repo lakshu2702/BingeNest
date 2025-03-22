@@ -22,7 +22,7 @@ To set up and run the project locally:
 
 1. Clone the repository.
    ```bash
-   git clone <https://github.com/lakshu2702/BingeNest>
+   git clone https://github.com/lakshu2702/BingeNest
    ```
 2. Open `index.html` in a browser.
 3. Ensure `index.css` is linked correctly.
