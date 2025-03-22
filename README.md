@@ -28,6 +28,6 @@ To set up and run the project locally:
 3. Ensure `index.css` is linked correctly.
 
 ## **Live Demo**
-🔗 **Check out the live version here:** [BingeNest Live Demo]([https://your-live-demo-link.com](https://binge-nest.vercel.app/))
+🔗 **Check out the live version here:** [BingeNest Live Demo](https://binge-nest.vercel.app/)
 
 This project is entirely front-end based, requiring no additional setup or backend configuration.
